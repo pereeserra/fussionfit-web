@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-fussion-500 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black shadow-glow transition duration-300 ease-out hover:bg-fussion-600 hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-fussion-500 bg-transparent px-5 py-2.5 text-sm font-semibold tracking-wider text-white transition duration-300 ease-out hover:bg-fussion-500 hover:text-black;
+}
+
+.fusion-card {
+  @apply bg-[#111] border border-[#222] p-5 rounded-2xl text-left shadow-lg transition-all duration-300 hover:border-fussion-500 hover:shadow-glow;
+}
+
+.anchor-title {
+  @apply text-fussion-500 font-extrabold;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.9s ease-out both;
+}
+

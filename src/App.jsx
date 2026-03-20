@@ -9,7 +9,7 @@ function App() {
           <nav className="flex items-center gap-3 text-xs font-bold uppercase tracking-wide text-white md:text-sm">
             <a href="#services" className="hover:text-fussion-500">Serveis</a>
             <a href="#schedules" className="hover:text-fussion-500">Horaris</a>
-            <a href="#pricing" className="hover:text-fussion-500">Tarifes</a>
+            <a href="#options" className="hover:text-fussion-500">Opcions</a>
             <a href="#contact" className="hover:text-fussion-500">Contacte</a>
           </nav>
         </div>
@@ -25,7 +25,7 @@ function App() {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="btn-primary">Demana informació</a>
-              <a href="tel:+34972123456" className="btn-secondary">Trucar ara</a>
+              <a href="tel:+34604417552" className="btn-secondary">Trucar ara</a>
             </div>
 
             <div className="grid grid-cols-1 gap-3 text-left text-sm md:grid-cols-3 md:text-base">
@@ -34,7 +34,7 @@ function App() {
                 <p>6:00 - 23:00 cada dia, flexibilitat completa.</p>
               </div>
               <div className="rounded-xl border border-[#222] bg-[#111]/70 px-4 py-3">
-                <p className="text-fussion-500 font-bold">Preu des de 45€/mes</p>
+                <p className="text-fussion-500 font-bold">Consulta les opcions disponibles</p>
                 <p>Accés lliure a sala, classes i assessorament bàsic.</p>
               </div>
               <div className="rounded-xl border border-[#222] bg-[#111]/70 px-4 py-3">
@@ -68,6 +68,7 @@ function App() {
         <section id="schedules" className="bg-[#070707] px-4 py-16 md:px-8">
           <div className="mx-auto max-w-6xl">
             <h3 className="anchor-title mb-4 text-center text-2xl font-black uppercase md:text-3xl">Horaris</h3>
+            <p className="mx-auto mb-6 max-w-3xl text-center text-sm text-[#ccc] md:text-base">Obert de 6:00 a 23:00 cada dia de la setmana, 365 dies l’any.</p>
             <div className="overflow-x-auto rounded-2xl border border-[#222] bg-[#111]/80">
               <table className="w-full min-w-[440px] border-separate border-spacing-0 text-left text-sm">
                 <thead>
@@ -78,49 +79,36 @@ function App() {
                   </tr>
                 </thead>
                 <tbody>
-                  {['Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres'].map((dia) => (
+                  {['Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte', 'Diumenge'].map((dia) => (
                     <tr key={dia} className="border-t border-[#222] hover:bg-[#1a1a1a]">
                       <td className="px-4 py-3 font-bold">{dia}</td>
                       <td className="px-4 py-3">6:00 – 23:00</td>
-                      <td className="px-4 py-3">18:00 – 20:00 | Cross+Fit</td>
+                      <td className="px-4 py-3">{dia === 'Dissabte' ? 'Espai lliure + HIIT' : dia === 'Diumenge' ? 'Recuperació activa' : '18:00 – 20:00 | Cross+Fit'}</td>
                     </tr>
                   ))}
-                  <tr className="border-t border-[#222] hover:bg-[#1a1a1a]">
-                    <td className="px-4 py-3 font-bold">Dissabte</td>
-                    <td className="px-4 py-3">8:00 – 20:00</td>
-                    <td className="px-4 py-3">Espai lliure + HIIT</td>
-                  </tr>
-                  <tr className="border-t border-[#222] hover:bg-[#1a1a1a]">
-                    <td className="px-4 py-3 font-bold">Diumenge</td>
-                    <td className="px-4 py-3">9:00 – 15:00</td>
-                    <td className="px-4 py-3">Recuperació activa</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        <section id="pricing" className="mx-auto max-w-6xl px-4 py-16 md:px-8">
-          <h3 className="anchor-title mb-4 text-center text-2xl font-black uppercase md:text-3xl">Preus</h3>
-          <p className="mx-auto mb-10 max-w-3xl text-center text-sm text-[#ccc] md:text-base">Sense compromisos, sense pagaments online. Apunta’t avui i comença a entrenar demà.</p>
+        <section id="options" className="mx-auto max-w-6xl px-4 py-16 md:px-8">
+          <h3 className="anchor-title mb-4 text-center text-2xl font-black uppercase md:text-3xl">Opcions</h3>
+          <p className="mx-auto mb-10 max-w-3xl text-center text-sm text-[#ccc] md:text-base">T’informam personalment de les opcions disponibles. Sense compromisos, sense pagaments online. Apunta’t avui i comença a entrenar demà.</p>
 
           <div className="grid gap-4 md:grid-cols-3">
             <article className="fusion-card">
-              <h4 className="mb-2 text-xl font-extrabold">Quot mensual</h4>
-              <p className="text-fussion-500 text-3xl font-black">45€</p>
-              <p className="text-[#ddd]">Accés lliure a la sala de màquines, vestidors i zone d’estiraments.</p>
-              <a href="#contact" className="btn-primary mt-4 inline-block">Apuntar-se</a>
+              <h4 className="mb-2 text-xl font-extrabold">Accés lliure</h4>
+              <p className="text-[#ddd]">Accés lliure a la sala de màquines, vestidors i zone d’estiraments. Consulta les condicions.</p>
+              <a href="#contact" className="btn-primary mt-4 inline-block">Demana informació</a>
             </article>
             <article className="fusion-card">
-              <h4 className="mb-2 text-xl font-extrabold">Grups reduïts</h4>
-              <p className="text-fussion-500 text-3xl font-black">60€/mes</p>
-              <p className="text-[#ddd]">Classe cross, funcionalitat i HIIT amb màxim 10 persones.</p>
+              <h4 className="mb-2 text-xl font-extrabold">Classes en grup</h4>
+              <p className="text-[#ddd]">Classe cross, funcionalitat i HIIT amb màxim 10 persones. Atenció personalitzada.</p>
               <a href="#contact" className="btn-primary mt-4 inline-block">Reserva plaça</a>
             </article>
             <article className="fusion-card">
               <h4 className="mb-2 text-xl font-extrabold">Entrenador personal</h4>
-              <p className="text-fussion-500 text-3xl font-black">A partir de 30€/sessió</p>
               <p className="text-[#ddd]">Assessorament 1:1, planificació i seguiment adaptat als teus objectius.</p>
               <a href="#contact" className="btn-primary mt-4 inline-block">Contacta’ns</a>
             </article>
@@ -136,7 +124,7 @@ function App() {
               {[
                 { name: 'Marina', quote: 'He guanyat força i he baixat 5 kg en 8 setmanes. Equip proper i molt motivador.' },
                 { name: 'Joan', quote: 'Les classes reduïdes són el millor: atenció personalitzada i ambient d’alt nivell.' },
-                { name: 'Clara', quote: 'Sense estrès, només progressos constants i a un preu immillorable a Sa Pobla.' },
+                { name: 'Clara', quote: 'Sense estrès, només progressos constants i un ambient excepcional a Sa Pobla.' },
               ].map((t) => (
                 <blockquote key={t.name} className="fusion-card">
                   <p className="mb-3 text-[#ddd]">“{t.quote}”</p>
@@ -154,14 +142,14 @@ function App() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="fusion-card">
               <h4 className="mb-3 text-xl font-bold">Dades</h4>
-              <p className="text-[#ddd]"><span className="font-semibold text-fussion-500">Telèfon:</span> <a href="tel:+34972123456" className="hover:text-fussion-500">+34 972 12 34 56</a></p>
-              <p className="text-[#ddd]"><span className="font-semibold text-fussion-500">WhatsApp:</span> <a href="https://wa.me/34972123456" target="_blank" rel="noreferrer" className="hover:text-fussion-500">xerrar ara</a></p>
+              <p className="text-[#ddd]"><span className="font-semibold text-fussion-500">Telèfon:</span> <a href="tel:+34604417552" className="hover:text-fussion-500">+34 604 417 552</a></p>
+              <p className="text-[#ddd]"><span className="font-semibold text-fussion-500">WhatsApp:</span> <a href="https://wa.me/34604417552" target="_blank" rel="noreferrer" className="hover:text-fussion-500">xerrar ara</a></p>
               <p className="text-[#ddd]"><span className="font-semibold text-fussion-500">Adreça:</span> Carrer Major, 122, Sa Pobla</p>
               <p className="text-[#ddd]"><span className="font-semibold text-fussion-500">Accés:</span> estacionament gratuït i transport local.</p>
               <p className="mt-4 text-sm">Sense pagament online. Tan sols apareix i entrenaràs.</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                <a href="tel:+34972123456" className="btn-primary">Truca</a>
-                <a href="https://wa.me/34972123456" target="_blank" rel="noreferrer" className="btn-secondary">WhatsApp</a>
+                <a href="tel:+34604417552" className="btn-primary">Truca</a>
+                <a href="https://wa.me/34604417552" target="_blank" rel="noreferrer" className="btn-secondary">WhatsApp</a>
                 <a href={googleMapsUrl} target="_blank" rel="noreferrer" className="btn-secondary">Com arribar</a>
               </div>
             </div>
@@ -187,8 +175,8 @@ function App() {
       </main>
 
       <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
-        <a href="tel:+34972123456" className="btn-primary px-4 py-2 text-xs">Trucar</a>
-        <a href="https://wa.me/34972123456" target="_blank" rel="noreferrer" className="btn-secondary px-4 py-2 text-xs">WhatsApp</a>
+        <a href="tel:+34604417552" className="btn-primary px-4 py-2 text-xs">Trucar</a>
+        <a href="https://wa.me/34604417552" target="_blank" rel="noreferrer" className="btn-secondary px-4 py-2 text-xs">WhatsApp</a>
       </div>
     </div>
   )

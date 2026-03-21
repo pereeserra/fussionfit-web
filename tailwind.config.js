@@ -16,15 +16,20 @@ export default {
         glow: '0 0 28px rgba(255, 199, 0, 0.4)',
       },
       keyframes: {
-        fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(16px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-      },
-      animation: {
-        fadeInUp: 'fadeInUp 0.8s ease-out both',
-      },
-    },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(40px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            zoom: {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.05)' },
+            },
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) both',
+            zoomSlow: 'zoom 10s ease-in-out infinite alternate',
+          },
   },
   plugins: [],
 }

@@ -1,25 +1,30 @@
 const Schedule = () => (
-  <section id="schedules" className="scroll-mt-24 bg-[#070707] px-4 py-16 md:px-8">
-    <div className="mx-auto max-w-6xl">
-      <h3 className="anchor-title mb-4 text-center text-2xl font-black uppercase md:text-3xl">Horaris</h3>
-      <p className="mx-auto mb-6 max-w-3xl text-center text-sm text-[#ccc] md:text-base">Obert de 6:00 a 23:00 cada dia de la setmana, 365 dies l’any.</p>
-      <div className="overflow-x-auto rounded-2xl border border-[#222] bg-[#111]/80">
-        <table className="w-full min-w-[440px] border-separate border-spacing-0 text-left text-sm">
-          <thead>
-            <tr className="bg-[#151515] text-[#fff]">
-              <th className="px-4 py-3">Dia</th>
-              <th className="px-4 py-3">Horari</th>
-            </tr>
-          </thead>
-          <tbody>
-            {['Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte', 'Diumenge'].map((dia) => (
-              <tr key={dia} className="border-t border-[#222] hover:bg-[#1a1a1a]">
-                <td className="px-4 py-3 font-bold">{dia}</td>
-                <td className="px-4 py-3">6:00 – 23:00</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+  <section
+    id="schedules"
+    className="scroll-mt-24 bg-[#070707] px-4 py-16 md:px-8"
+  >
+    <div className="mx-auto max-w-3xl flex flex-col items-center text-center">
+      <span className="mb-4 inline-block rounded-full bg-yellow-400/90 px-5 py-1.5 text-xs font-bold uppercase tracking-widest text-black shadow-md">
+        Obert cada dia
+      </span>
+      <h3 className="mb-3 text-3xl font-black uppercase text-white md:text-4xl drop-shadow-lg">
+        Horari Fussion Fit
+      </h3>
+      <p className="mb-8 max-w-xl text-base text-[#ccc] md:text-lg">
+        Gaudeix de flexibilitat total: <span className="font-semibold text-yellow-400">de 6:00 a 23:00</span> <br className="hidden md:inline" />
+        <span className="font-semibold text-yellow-400">365 dies l’any</span>
+      </p>
+      <div className="flex flex-col items-center gap-2 w-full">
+        <div className="flex items-center justify-center gap-3 w-full">
+          <div className="flex-1 h-0.5 bg-gradient-to-r from-yellow-400/60 via-yellow-400/0" />
+          <span className="px-4 py-2 rounded-lg bg-[#111] border border-yellow-400 text-yellow-400 font-bold text-lg shadow-sm">
+            6:00 – 23:00
+          </span>
+          <div className="flex-1 h-0.5 bg-gradient-to-l from-yellow-400/60 via-yellow-400/0" />
+        </div>
+        <span className="mt-2 text-xs uppercase tracking-widest text-[#aaa]">
+          Tots els dies de la setmana
+        </span>
       </div>
     </div>
   </section>

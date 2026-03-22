@@ -30,7 +30,7 @@ const Navbar = () => {
         </a>
         <nav className="flex items-center gap-8 text-xs font-bold uppercase tracking-wide text-white md:text-sm">
           <a href="#services" className="relative hover:text-fussion-500 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-fussion-500 after:transition-all after:duration-300 hover:after:w-full">Serveis</a>
-          <a href="#schedules" className="relative hover:text-fussion-500 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-fussion-500 after:transition-all after:duration-300 hover:after:w-full">Horaris</a>
+          <a href="#schedules" className="relative hover:text-fussion-500 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-fussion-500 after:transition-all after:duration-300 hover:after:w-full">Horari</a>
           <a href="#options" className="relative hover:text-fussion-500 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-fussion-500 after:transition-all after:duration-300 hover:after:w-full">Opcions</a>
           <a href="#contact" className="relative hover:text-fussion-500 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-fussion-500 after:transition-all after:duration-300 hover:after:w-full">Contacte</a>
         </nav>

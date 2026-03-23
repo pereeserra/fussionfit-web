@@ -23,6 +23,13 @@ body {
   min-width: 320px;
   background-color: #000000;
   color: #ffffff;
+  background: radial-gradient(circle at top, rgba(255,193,7,0.05), #000 60%);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ffc107, transparent);
+  margin: 60px 0;
 }
 
 a {
@@ -111,6 +118,45 @@ select {
 
 .fade-in-up {
   animation: fadeInUp 0.9s ease-out both;
+}
+
+.section-dark {
+  background: #000;
+}
+
+.section-dark-soft {
+  background: #0a0a0a;
+}
+
+.section-dark-gradient {
+  background: radial-gradient(circle at top, rgba(255,193,7,0.08), #000 60%);
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ffc107;
+  box-shadow: 0 10px 30px rgba(255,193,7,0.15);
+}
+
+.button-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,193,7,0.4);
+}
+
+.floating-buttons {
+  bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .floating-buttons {
+    bottom: 10px;
+    right: 10px;
+    scale: 0.9;
+  }
 }
 
 @keyframes fadeInUp {
